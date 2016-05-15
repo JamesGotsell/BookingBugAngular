@@ -36,9 +36,9 @@ app.directive('bookingBugData', [ 'BookingBugService' , function ( BookingBugSer
     return {
         restrict: 'E',
         transclude: true,
-        template: '<li class="list" ng-repeat="item in bookings"> <div class="stuff"><h2> {{ item.name }} </h2> ' +
+        template: '<div class="row"><li class="list .col-xs-12 .col-sm-6 .col-lg-8" ng-repeat="item in bookings"> <div class="stuff"><h2> {{ item.name }} </h2> ' +
         '           <p> {{ item.description }}</p>' +
-        '             <p> price: £ {{ item.prices[0] }}</p></div> </li>',
+        '             <p> price: £ {{ item.prices[0] }}</p></div> </li> </div>',
         link: function(scope, element, attrs) {
 
         },
